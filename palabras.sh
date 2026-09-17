@@ -1,4 +1,6 @@
 #!/bin/bash
+if [ $# -eq 0] || [ $# -gt 2 ]; then
+    echo "ERROR, colocaste menos de un argumento o más de dos"
 carpetas=${1:-/}
 resultados=$(grep -rl -D skip "home" "$carpetas" 2>/dev/null)
 
