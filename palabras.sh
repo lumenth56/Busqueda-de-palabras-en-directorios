@@ -1,6 +1,6 @@
 #!/bin/bash
 carpetas=$1
-resultado=$(grep -rl "home" "$carpetas" 2>/dev/null)
+resultados=$(grep -rl "home" "$carpetas" 2>/dev/null)
 
 if [ -z "$resultados"]; then
     echo "No se hallo la palabra home"
