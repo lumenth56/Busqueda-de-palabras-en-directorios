@@ -1,6 +1,7 @@
 #!/bin/bash
-if [ $# -eq 0] || [ $# -gt 2 ]; then
+if [ $# -eq 0 ] || [ $# -gt 2 ]; then
     echo "ERROR, colocaste menos de un argumento o más de dos"
+fi
 palabra=$1
 carpetas=${2:-/}
 resultados=$(grep -rl -D skip "$palabra" "$carpetas" 2>/dev/null)
